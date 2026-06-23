@@ -54,6 +54,7 @@ export default function RandomQuizScreen({ quizzes, categories, onBack }) {
       />
       {currentQuiz ? (
         <QuizCard
+          key={currentQuiz.id}
           quiz={currentQuiz}
           categoryLabel={categoryLabels[currentQuiz.categoryId]}
           allQuizzes={quizzes}
