@@ -8,7 +8,7 @@ import EmptyState from '../components/EmptyState';
 export default function CategoryScreen({
   categoryId,
   categories,
-  quizzes,
+  quizzes = [],
   onBack,
 }) {
   const category = useMemo(
@@ -57,7 +57,7 @@ export default function CategoryScreen({
         ) : (
           <View style={styles.quizList}>
             {categoryQuizzes.map((quiz) => (
-              <QuizCard key={quiz.id} quiz={quiz} />
+              <QuizCard key={quiz.id} quiz={quiz} allQuizzes={quizzes} />
             ))}
           </View>
         )}

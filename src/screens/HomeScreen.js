@@ -104,6 +104,7 @@ export default function HomeScreen({
                 key={quiz.id}
                 quiz={quiz}
                 categoryLabel={categoryLabels[quiz.categoryId]}
+                allQuizzes={quizzes}
               />
             ))}
           </View>
